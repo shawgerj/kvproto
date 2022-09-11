@@ -38,6 +38,7 @@ service Tikv {
     rpc KvDeleteRange(kvrpcpb.DeleteRangeRequest) returns (kvrpcpb.DeleteRangeResponse) {}
 
     // Raw commands; no transaction support.
+    rpc RawPrintStats(kvrpcpb.RawPrintStatsRequest) returns (kvrpcpb.RawPrintStatsResponse) {}
     rpc RawGet(kvrpcpb.RawGetRequest) returns (kvrpcpb.RawGetResponse) {}
     rpc RawBatchGet(kvrpcpb.RawBatchGetRequest) returns (kvrpcpb.RawBatchGetResponse) {}
     rpc RawPut(kvrpcpb.RawPutRequest) returns (kvrpcpb.RawPutResponse) {}
