@@ -142,6 +142,7 @@ message BatchCommandsRequest {
 
             kvrpcpb.CheckTxnStatusRequest CheckTxnStatus = 25;
             kvrpcpb.TxnHeartBeatRequest TxnHeartBeat = 26;
+            kvrpcpb.RawPrintStatsRequest RawPrintStats = 27;
 
             kvrpcpb.CheckSecondaryLocksRequest CheckSecondaryLocks = 33;
 
@@ -193,6 +194,7 @@ message BatchCommandsResponse {
 
             kvrpcpb.CheckTxnStatusResponse CheckTxnStatus = 25;
             kvrpcpb.TxnHeartBeatResponse TxnHeartBeat = 26;
+            kvrpcpb.RawPrintStatsResponse RawPrintStats = 27;
 
             kvrpcpb.CheckSecondaryLocksResponse CheckSecondaryLocks = 33;
 
