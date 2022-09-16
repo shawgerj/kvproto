@@ -45,6 +45,10 @@ message DeleteRangeRequest {
 
 message DeleteRangeResponse {}
 
+message PrintStatsRequest {}
+
+message PrintStatsResponse {}
+
 message SnapRequest {}
 
 message SnapResponse {
@@ -99,6 +103,7 @@ message Request {
     DeleteRangeRequest delete_range = 8;
     IngestSSTRequest ingest_sst = 9;
     ReadIndexRequest read_index = 10;
+    PrintStatsRequest print_stats = 11;
 }
 
 message Response {
@@ -111,6 +116,7 @@ message Response {
     DeleteRangeResponse delte_range = 8;
     IngestSSTResponse ingest_sst = 9;
     ReadIndexResponse read_index = 10;
+    PrintStatsResponse print_stats = 11;
 }
 
 message ChangePeerRequest {
@@ -170,10 +176,6 @@ message CompactLogRequest {
 
 message CompactLogResponse {}
 
-message GetStatsRequest {}
-
-message GetStatsResponse {}
-
 message TransferLeaderRequest {
     metapb.Peer peer = 1;
 }
@@ -228,7 +230,6 @@ enum AdminCmdType {
     RollbackMerge = 9;
     BatchSplit = 10;
     ChangePeerV2 = 11;
-    GetStats = 12;
 }
 
 message AdminRequest {
@@ -244,7 +245,6 @@ message AdminRequest {
     BatchSplitRequest splits = 10;
     ChangePeerV2Request change_peer_v2 = 11;
     ComputeHashRequest compute_hash = 12;
-    GetStatsRequest get_stats = 13;
 }
 
 message AdminResponse {
@@ -259,7 +259,6 @@ message AdminResponse {
     RollbackMergeResponse rollback_merge = 9;
     BatchSplitResponse splits = 10;
     ChangePeerV2Response change_peer_v2 = 11;
-    GetStatsResponse get_stats = 12;
 }
 
 // For get the leader of the region.
