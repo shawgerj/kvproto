@@ -18,7 +18,7 @@ go: check
 
 rust: init
 	cargo check && \
-	cargo check --no-default-features --features prost-codec
+	cargo check --no-default-features --features protobuf-codec
 
 c++: check
 	mkdir -p kvprotobuild && cd kvprotobuild && cmake ../cpp -DCMAKE_PREFIX_PATH=$$GRPC_INSTALL_PATH && make
